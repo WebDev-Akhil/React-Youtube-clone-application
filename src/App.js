@@ -28,13 +28,17 @@ export default () => {
       </Grid>
     </Grid>
   );
+ 
 
   async function handleSubmit(searchTerm) {
     const { data: { items: videos } } = await youtube.get("search", {
       params: {
         part: "snippet",
         maxResults: 5,
-        key: process.env.REACT_APP_API_KEY,
+        key: 'AIzaSyBxScnSkL2YTK9KRTYpI6YTZ_ZvAXT30ow',
+        //key: process.env.REACT_APP_API_KEY,
+      
+        //AIzaSyBxScnSkL2YTK9KRTYpI6YTZ_ZvAXT30ow
         q: searchTerm,
       }
     });
